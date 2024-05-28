@@ -5,7 +5,7 @@
       width: 80px;
       height: 39px;
       right: calc(50vw - 40px);
-      top: 300px;
+      top: 290px;
       .boxForSvg {
         svg {
           height: 13px;
@@ -17,7 +17,6 @@
       }
     }
     .slider {
-      //   overflow-x: auto;
       background: left bottom / 277px 68px url(/images/pattern-curve.svg)
         no-repeat;
       .slide {
@@ -26,37 +25,44 @@
           width: 320px;
           height: auto;
           padding: 0;
-          background: 0px 31px / 307px 321px url(/images/pattern-bg.svg)
+          padding-bottom: 70px;
+          background: 0px 25px / 321px 310px url(/images/pattern-bg.svg)
               no-repeat,
-            center 365px / 70px 40px url(/images/pattern-quotes.svg) no-repeat;
+            center 365px / 60px 50px url(/images/pattern-quotes.svg) no-repeat;
           .boxForImg {
             position: static;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 385px;
+            height: 365px;
+            margin-bottom: 27px;
+            box-shadow: none;
             img {
+              display: block;
               width: 255px;
+              box-shadow: -5px 10px 10px hsl(240, 38%, 60%, 5%),
+                10px 0px 10px hsl(240, 38%, 60%, 5%);
             }
             .divForShadow {
-              width: 70px;
-              top: 299px;
-              right: 196px;
+              width: 80px;
+              top: 290px;
+              right: 176px;
             }
           }
           .text {
             width: auto;
+            margin-bottom: 17px;
             font-size: 18px;
             text-align: center;
           }
           .name {
             display: block;
-            font-size: 14px;
+            font-size: 15px;
             text-align: center;
           }
           .pos {
             display: block;
-            font-size: 14px;
+            font-size: 15px;
             text-align: center;
           }
         }

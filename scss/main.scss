@@ -10,14 +10,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: calc(50vh + -275px); //125px; 15.62vh
-    right: calc(50vw - 190px); //538px;
+    bottom: calc(50vh + -280px); //125px; 15.62vh
+    right: calc(50vw - 192px); //538px;
     width: 114px;
     height: 56px;
     border-radius: 56px;
     z-index: 100;
     background-color: white;
-    box-shadow: 0px 10px 20px hsl(240, 38%, 90%);
+    box-shadow: 0px 10px 20px hsl(240, 38%, 60%, 30%);
     .boxForSvg {
       display: flex;
       justify-content: center;
@@ -25,13 +25,13 @@
       height: 80%;
       width: 58px;
       cursor: pointer;
-
       svg {
         height: 18px;
         width: 13px;
       }
     }
   }
+
   .slider {
     display: flex;
     justify-content: left;
@@ -54,36 +54,39 @@
         position: relative;
         height: 800px;
         width: 1440px;
-        padding: 290px 167px;
+        padding: 280px 167px;
         z-index: -100;
-        background: 670px 47px url(/images/pattern-bg.svg) no-repeat,
+        background: 670px 50px url(/images/pattern-bg.svg) no-repeat,
           260px 215px url(/images/pattern-quotes.svg) no-repeat;
         .boxForImg {
           position: absolute;
+          height: 540px;
           left: 735px;
-          top: 110px;
-          // left: 51vw; //735px;
-          // top: 13.7vh; //110px;
+          top: 115px;
           z-index: -50;
+          box-shadow: -5px 10px 10px hsl(240, 38%, 60%, 5%),
+            10px 0px 10px hsl(240, 38%, 60%, 5%);
+
           img {
+            border-radius: 5px;
           }
           .divForShadow {
             position: absolute;
-            width: 240px;
+            width: 340px;
             height: 20px;
-            top: 520px;
-            right: 278px;
+            top: 519px;
+            right: 178px;
             background-color: blue;
-            z-index: -80;
-            // box-shadow: 0px 20px 40px hsl(240, 38%, 60%);
-            box-shadow: 0px 20px 40px hsl(240, 38%, 10%);
+            z-index: -60;
+            box-shadow: 0px 15px 30px hsla(240, 17%, 49%, 0.6);
+            // box-shadow: 0px 20px 40px hsl(240, 38%, 10%);
           }
         }
         .text {
           width: 632px;
-          margin-bottom: 40px;
+          margin-bottom: 25px;
           font-weight: 300;
-          line-height: 1.4;
+          line-height: 1.36;
           z-index: 50;
           color: hsl(240, 38%, 20%);
         }
@@ -97,29 +100,8 @@
           display: inline-block;
           font-size: 20px;
           color: hsl(240, 18%, 77%);
-          font-weight: 400;
+          font-weight: 500;
         }
-      }
-    }
-  }
-
-  .card1 {
-    // display: none;
-
-    .text {
-    }
-    .name {
-      span {
-      }
-    }
-  }
-  .card2 {
-    // display: none;
-
-    .text {
-    }
-    .name {
-      span {
       }
     }
   }

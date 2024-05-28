@@ -68,14 +68,14 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: calc(50vh - 275px);
-  right: calc(50vw - 190px);
+  bottom: calc(50vh - 280px);
+  right: calc(50vw - 192px);
   width: 114px;
   height: 56px;
   border-radius: 56px;
   z-index: 100;
   background-color: white;
-  box-shadow: 0px 10px 20px hsl(240, 38%, 90%);
+  box-shadow: 0px 10px 20px hsla(240, 38%, 60%, 0.3);
 }
 .boxForSlider .buttons .boxForSvg {
   display: flex;
@@ -113,31 +113,36 @@ ul {
   position: relative;
   height: 800px;
   width: 1440px;
-  padding: 290px 167px;
+  padding: 280px 167px;
   z-index: -100;
-  background: 670px 47px url(/images/pattern-bg.svg) no-repeat, 260px 215px url(/images/pattern-quotes.svg) no-repeat;
+  background: 670px 50px url(/images/pattern-bg.svg) no-repeat, 260px 215px url(/images/pattern-quotes.svg) no-repeat;
 }
 .boxForSlider .slider .slide .card .boxForImg {
   position: absolute;
+  height: 540px;
   left: 735px;
-  top: 110px;
+  top: 115px;
   z-index: -50;
+  box-shadow: -5px 10px 10px hsla(240, 38%, 60%, 0.05), 10px 0px 10px hsla(240, 38%, 60%, 0.05);
+}
+.boxForSlider .slider .slide .card .boxForImg img {
+  border-radius: 5px;
 }
 .boxForSlider .slider .slide .card .boxForImg .divForShadow {
   position: absolute;
-  width: 240px;
+  width: 340px;
   height: 20px;
-  top: 520px;
-  right: 278px;
+  top: 519px;
+  right: 178px;
   background-color: blue;
-  z-index: -80;
-  box-shadow: 0px 20px 40px hsl(240, 38%, 10%);
+  z-index: -60;
+  box-shadow: 0px 15px 30px hsla(240, 17%, 49%, 0.6);
 }
 .boxForSlider .slider .slide .card .text {
   width: 632px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.36;
   z-index: 50;
   color: hsl(240, 38%, 20%);
 }
@@ -151,8 +156,9 @@ ul {
   display: inline-block;
   font-size: 20px;
   color: hsl(240, 18%, 77%);
-  font-weight: 400;
+  font-weight: 500;
 }
+
 @media screen and (max-width: 500px) {
   .boxForSlider {
     padding-bottom: 50px;
@@ -161,7 +167,7 @@ ul {
     width: 80px;
     height: 39px;
     right: calc(50vw - 40px);
-    top: 300px;
+    top: 290px;
   }
   .boxForSlider .buttons .boxForSvg svg {
     height: 13px;
@@ -180,36 +186,42 @@ ul {
     width: 320px;
     height: auto;
     padding: 0;
-    background: 0px 31px/307px 321px url(/images/pattern-bg.svg) no-repeat, center 365px/70px 40px url(/images/pattern-quotes.svg) no-repeat;
+    padding-bottom: 70px;
+    background: 0px 25px/321px 310px url(/images/pattern-bg.svg) no-repeat, center 365px/60px 50px url(/images/pattern-quotes.svg) no-repeat;
   }
   .boxForSlider .slider .slide .card .boxForImg {
     position: static;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 385px;
+    height: 365px;
+    margin-bottom: 27px;
+    box-shadow: none;
   }
   .boxForSlider .slider .slide .card .boxForImg img {
+    display: block;
     width: 255px;
+    box-shadow: -5px 10px 10px hsla(240, 38%, 60%, 0.05), 10px 0px 10px hsla(240, 38%, 60%, 0.05);
   }
   .boxForSlider .slider .slide .card .boxForImg .divForShadow {
-    width: 70px;
-    top: 299px;
-    right: 196px;
+    width: 80px;
+    top: 290px;
+    right: 176px;
   }
   .boxForSlider .slider .slide .card .text {
     width: auto;
+    margin-bottom: 17px;
     font-size: 18px;
     text-align: center;
   }
   .boxForSlider .slider .slide .card .name {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
   }
   .boxForSlider .slider .slide .card .pos {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
   }
 }
