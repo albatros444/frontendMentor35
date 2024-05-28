@@ -1,19 +1,47 @@
 @media screen and (max-width: 500px) {
   .boxForSlider {
+    padding-bottom: 50px;
     .buttons {
+      width: 80px;
+      height: 39px;
+      right: calc(50vw - 40px);
+      top: 300px;
+      .boxForSvg {
+        svg {
+          height: 13px;
+          width: 9px;
+          path {
+            stroke-width: 4px;
+          }
+        }
+      }
     }
     .slider {
       //   overflow-x: auto;
+      background: left bottom / 277px 68px url(/images/pattern-curve.svg)
+        no-repeat;
       .slide {
+        align-items: start;
         .card {
           width: 320px;
           height: auto;
           padding: 0;
-
+          background: 0px 31px / 307px 321px url(/images/pattern-bg.svg)
+              no-repeat,
+            center 365px / 70px 40px url(/images/pattern-quotes.svg) no-repeat;
           .boxForImg {
             position: static;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 385px;
             img {
               width: 255px;
+            }
+            .divForShadow {
+              width: 70px;
+              top: 299px;
+              right: 196px;
             }
           }
           .text {

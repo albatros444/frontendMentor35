@@ -85,6 +85,10 @@ ul {
   width: 58px;
   cursor: pointer;
 }
+.boxForSlider .buttons .boxForSvg svg {
+  height: 18px;
+  width: 13px;
+}
 .boxForSlider .slider {
   display: flex;
   justify-content: left;
@@ -93,6 +97,7 @@ ul {
   position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  background: left bottom url(/images/pattern-curve.svg) no-repeat;
   transition-duration: 0.5s;
 }
 .boxForSlider .slider .slide {
@@ -103,7 +108,6 @@ ul {
   justify-content: center;
   align-items: center;
   scroll-snap-align: center;
-  background: left bottom url(/images/pattern-curve.svg) no-repeat;
 }
 .boxForSlider .slider .slide .card {
   position: relative;
@@ -150,16 +154,48 @@ ul {
   font-weight: 400;
 }
 @media screen and (max-width: 500px) {
+  .boxForSlider {
+    padding-bottom: 50px;
+  }
+  .boxForSlider .buttons {
+    width: 80px;
+    height: 39px;
+    right: calc(50vw - 40px);
+    top: 300px;
+  }
+  .boxForSlider .buttons .boxForSvg svg {
+    height: 13px;
+    width: 9px;
+  }
+  .boxForSlider .buttons .boxForSvg svg path {
+    stroke-width: 4px;
+  }
+  .boxForSlider .slider {
+    background: left bottom/277px 68px url(/images/pattern-curve.svg) no-repeat;
+  }
+  .boxForSlider .slider .slide {
+    align-items: start;
+  }
   .boxForSlider .slider .slide .card {
     width: 320px;
     height: auto;
     padding: 0;
+    background: 0px 31px/307px 321px url(/images/pattern-bg.svg) no-repeat, center 365px/70px 40px url(/images/pattern-quotes.svg) no-repeat;
   }
   .boxForSlider .slider .slide .card .boxForImg {
     position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 385px;
   }
   .boxForSlider .slider .slide .card .boxForImg img {
     width: 255px;
+  }
+  .boxForSlider .slider .slide .card .boxForImg .divForShadow {
+    width: 70px;
+    top: 299px;
+    right: 196px;
   }
   .boxForSlider .slider .slide .card .text {
     width: auto;

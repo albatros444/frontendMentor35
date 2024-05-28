@@ -25,6 +25,11 @@
       height: 80%;
       width: 58px;
       cursor: pointer;
+
+      svg {
+        height: 18px;
+        width: 13px;
+      }
     }
   }
   .slider {
@@ -35,6 +40,7 @@
     position: relative;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    background: left bottom url(/images/pattern-curve.svg) no-repeat;
     transition-duration: 0.5s;
     .slide {
       height: 100vh;
@@ -44,7 +50,6 @@
       justify-content: center;
       align-items: center;
       scroll-snap-align: center;
-      background: left bottom url(/images/pattern-curve.svg) no-repeat;
       .card {
         position: relative;
         height: 800px;
