@@ -58,39 +58,78 @@ ul {
   color: hsl(228, 45%, 44%);
 }
 
-.slider {
-  display: flex;
-  overflow: hidden;
-  transition-duration: 0.5s;
-}
-.slider .slide {
-  overscroll-behavior: contain;
-}
-.slider .slide .card {
+.boxForSlider {
   position: relative;
   height: 100vh;
   width: 100vw;
+}
+.boxForSlider .buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: calc(50vh - 275px);
+  right: calc(50vw - 190px);
+  width: 114px;
+  height: 56px;
+  border-radius: 56px;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0px 10px 20px hsl(240, 38%, 90%);
+}
+.boxForSlider .buttons .boxForSvg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 58px;
+  cursor: pointer;
+}
+.boxForSlider .slider {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  transition-duration: 0.5s;
+}
+.boxForSlider .slider .slide {
+  height: 100vh;
+  width: 100vw;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  background: left bottom url(/images/pattern-curve.svg) no-repeat;
+}
+.boxForSlider .slider .slide .card {
+  position: relative;
+  height: 800px;
+  width: 1440px;
   padding: 290px 167px;
   z-index: -100;
-  background: 670px 47px url(/images/pattern-bg.svg) no-repeat, 260px 215px url(/images/pattern-quotes.svg) no-repeat, left bottom url(/images/pattern-curve.svg) no-repeat;
+  background: 670px 47px url(/images/pattern-bg.svg) no-repeat, 260px 215px url(/images/pattern-quotes.svg) no-repeat;
 }
-.slider .slide .card img {
+.boxForSlider .slider .slide .card .boxForImg {
   position: absolute;
   left: 735px;
   top: 110px;
   z-index: -50;
 }
-.slider .slide .card .divForShadow {
+.boxForSlider .slider .slide .card .boxForImg .divForShadow {
   position: absolute;
   width: 240px;
   height: 20px;
-  bottom: 153px;
-  right: 454px;
+  top: 520px;
+  right: 278px;
   background-color: blue;
   z-index: -80;
-  box-shadow: 0px 20px 40px hsl(240, 38%, 60%);
+  box-shadow: 0px 20px 40px hsl(240, 38%, 10%);
 }
-.slider .slide .card .text {
+.boxForSlider .slider .slide .card .text {
   width: 632px;
   margin-bottom: 40px;
   font-weight: 300;
@@ -98,36 +137,45 @@ ul {
   z-index: 50;
   color: hsl(240, 38%, 20%);
 }
-.slider .slide .card .name {
+.boxForSlider .slider .slide .card .name {
+  display: inline-block;
   font-size: 20px;
   font-weight: 700;
   color: hsl(240, 38%, 20%);
 }
-.slider .slide .card .name span {
+.boxForSlider .slider .slide .card .pos {
+  display: inline-block;
+  font-size: 20px;
   color: hsl(240, 18%, 77%);
   font-weight: 400;
 }
-
-.buttons {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  bottom: 125px;
-  right: 538px;
-  width: 114px;
-  height: 56px;
-  border-radius: 56px;
-  background-color: white;
-  box-shadow: 0px 10px 20px hsl(240, 38%, 90%);
-}
-.buttons .boxForSvg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-  width: 58px;
-  cursor: pointer;
+@media screen and (max-width: 500px) {
+  .boxForSlider .slider .slide .card {
+    width: 320px;
+    height: auto;
+    padding: 0;
+  }
+  .boxForSlider .slider .slide .card .boxForImg {
+    position: static;
+  }
+  .boxForSlider .slider .slide .card .boxForImg img {
+    width: 255px;
+  }
+  .boxForSlider .slider .slide .card .text {
+    width: auto;
+    font-size: 18px;
+    text-align: center;
+  }
+  .boxForSlider .slider .slide .card .name {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+  .boxForSlider .slider .slide .card .pos {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
