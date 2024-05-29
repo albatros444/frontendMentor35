@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 999px) {
   .boxForSlider {
     padding-bottom: 50px;
     .buttons {
@@ -17,13 +17,15 @@
       }
     }
     .slider {
-      background: left bottom / 277px 68px url(/images/pattern-curve.svg)
-        no-repeat;
+      background: left bottom / 74vw 18vw url(/images/pattern-curve.svg)
+        no-repeat; //277px 68px
       .slide {
+        // overflow-y: scroll;
+        height: 100vh;
         align-items: start;
         .card {
           width: 320px;
-          height: auto;
+          height: 100vh;
           padding: 0;
           padding-bottom: 70px;
           background: 0px 25px / 321px 310px url(/images/pattern-bg.svg)
@@ -52,6 +54,7 @@
           .text {
             width: auto;
             margin-bottom: 17px;
+
             font-size: 18px;
             text-align: center;
           }
@@ -64,6 +67,77 @@
             display: block;
             font-size: 15px;
             text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1000px) {
+  .boxForSlider {
+    .buttons {
+      bottom: calc(50vh + -195px);
+      right: calc(50vw - 128px);
+      width: 80px;
+      height: 39px;
+      border-radius: 39px;
+      .boxForSvg {
+        svg {
+          width: 16px;
+          height: 12px;
+          path {
+            stroke-width: 4px;
+          }
+        }
+      }
+    }
+    .slider {
+      .slide {
+        .card {
+          max-height: 560px;
+          width: 1008px;
+          padding: 196px 117px;
+          background: 469px 35px / 483px 455px url(/images/pattern-bg.svg)
+              no-repeat,
+            182px 150px / 81px 67px url(/images/pattern-quotes.svg) no-repeat;
+          .boxForImg {
+            height: 378px;
+            left: 514px;
+            top: 80px;
+            img {
+              width: 378px;
+            }
+            .divForShadow {
+              width: 237px;
+              height: 12px;
+              top: 363px;
+              right: 125px;
+            }
+          }
+          .text {
+            width: 450px;
+            margin-bottom: 15px;
+            font-size: 22px;
+          }
+          .name {
+            font-size: 15px;
+          }
+          .pos {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .boxForSlider {
+    .slider {
+      .slide {
+        .card {
+          .text {
+            padding: 0 15px;
           }
         }
       }

@@ -14,7 +14,7 @@ body {
   padding: 0;
   font-size: 32px;
   font-family: "Inter", sans-serif;
-  /* //position: relative; ///for footer with absolute position --> */
+  position: relative;
 }
 body h1,
 body h2,
@@ -96,9 +96,11 @@ ul {
   overflow-x: hidden;
   position: relative;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   background: left bottom url(/images/pattern-curve.svg) no-repeat;
-  transition-duration: 0.5s;
+  z-index: -60;
+  -moz-transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .boxForSlider .slider .slide {
   height: 100vh;
@@ -134,7 +136,6 @@ ul {
   height: 20px;
   top: 519px;
   right: 178px;
-  background-color: blue;
   z-index: -60;
   box-shadow: 0px 15px 30px hsla(240, 17%, 49%, 0.6);
 }
@@ -159,7 +160,7 @@ ul {
   font-weight: 500;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 999px) {
   .boxForSlider {
     padding-bottom: 50px;
   }
@@ -177,14 +178,15 @@ ul {
     stroke-width: 4px;
   }
   .boxForSlider .slider {
-    background: left bottom/277px 68px url(/images/pattern-curve.svg) no-repeat;
+    background: left bottom/74vw 18vw url(/images/pattern-curve.svg) no-repeat;
   }
   .boxForSlider .slider .slide {
+    height: 100vh;
     align-items: start;
   }
   .boxForSlider .slider .slide .card {
     width: 320px;
-    height: auto;
+    height: 100vh;
     padding: 0;
     padding-bottom: 70px;
     background: 0px 25px/321px 310px url(/images/pattern-bg.svg) no-repeat, center 365px/60px 50px url(/images/pattern-quotes.svg) no-repeat;
@@ -223,6 +225,58 @@ ul {
     display: block;
     font-size: 15px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1000px) {
+  .boxForSlider .buttons {
+    bottom: calc(50vh - 195px);
+    right: calc(50vw - 128px);
+    width: 80px;
+    height: 39px;
+    border-radius: 39px;
+  }
+  .boxForSlider .buttons .boxForSvg svg {
+    width: 16px;
+    height: 12px;
+  }
+  .boxForSlider .buttons .boxForSvg svg path {
+    stroke-width: 4px;
+  }
+  .boxForSlider .slider .slide .card {
+    max-height: 560px;
+    width: 1008px;
+    padding: 196px 117px;
+    background: 469px 35px/483px 455px url(/images/pattern-bg.svg) no-repeat, 182px 150px/81px 67px url(/images/pattern-quotes.svg) no-repeat;
+  }
+  .boxForSlider .slider .slide .card .boxForImg {
+    height: 378px;
+    left: 514px;
+    top: 80px;
+  }
+  .boxForSlider .slider .slide .card .boxForImg img {
+    width: 378px;
+  }
+  .boxForSlider .slider .slide .card .boxForImg .divForShadow {
+    width: 237px;
+    height: 12px;
+    top: 363px;
+    right: 125px;
+  }
+  .boxForSlider .slider .slide .card .text {
+    width: 450px;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+  .boxForSlider .slider .slide .card .name {
+    font-size: 15px;
+  }
+  .boxForSlider .slider .slide .card .pos {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .boxForSlider .slider .slide .card .text {
+    padding: 0 15px;
   }
 }
 
